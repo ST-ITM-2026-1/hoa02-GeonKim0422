@@ -3,45 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Skills</title>
+  <title>Geon Kim — Skills</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
+    <a href="index.html" class="nav-brand">GK<span>.</span></a>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="github.html">GitHub</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span>
+      <span class="toggle-label" id="themeLabel">Dark</span>
+    </button>
   </nav>
 
   <main>
-    <section>
+    <div class="page-header fade-up fade-up-1">
       <h1>Skills</h1>
+      <p>Technologies and tools I work with.</p>
+    </div>
 
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>Git & GitHub</li>
-      </ul>
+    <!-- ─────────────────────────────────────────
+         💡 CUSTOMIZE: 스킬 칩 추가/제거
+         각 <div class="skill-chip"> 안에 텍스트만 바꾸면 됨
+         ───────────────────────────────────────── -->
 
+    <div class="skills-block fade-up fade-up-2">
+      <h2>Languages</h2>
+      <div class="skills-grid">
+        <div class="skill-chip">HTML</div>
+        <div class="skill-chip">CSS</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">Java</div>
+        <div class="skill-chip">C</div>
+      </div>
+    </div>
+
+    <div class="skills-block fade-up fade-up-3">
+      <h2>Tools & Platforms</h2>
+      <div class="skills-grid">
+        <div class="skill-chip">Git</div>
+        <div class="skill-chip">GitHub</div>
+        <div class="skill-chip">QEMU</div>
+        <div class="skill-chip">Linux</div>
+        <div class="skill-chip">VS Code</div>
+      </div>
+    </div>
+
+    <div class="skills-block fade-up fade-up-4">
       <h2>Soft Skills</h2>
-      <ul>
-        <li>Problem Solving</li>
-        <li>Team Collaboration</li>
-        <li>Time Management</li>
-      </ul>
-    </section>
+      <div class="skills-grid">
+        <div class="skill-chip">Problem Solving</div>
+        <div class="skill-chip">Team Collaboration</div>
+        <div class="skill-chip">Time Management</div>
+        <div class="skill-chip">Communication</div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Geon Kim</p> 
-  </footer>
+  <footer><p>&copy; 2026 Geon Kim</p></footer>
 
+  <script src="main.js"></script>
 </body>
 </html>

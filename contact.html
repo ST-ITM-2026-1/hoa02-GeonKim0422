@@ -3,43 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Contact</title>
+  <title>Geon Kim — Contact</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
+    <a href="index.html" class="nav-brand">GK<span>.</span></a>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="github.html">GitHub</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span>
+      <span class="toggle-label" id="themeLabel">Dark</span>
+    </button>
   </nav>
 
   <main>
-    <section>
+    <div class="page-header fade-up fade-up-1">
       <h1>Contact</h1>
-      <p>Feel free to reach out to me!</p> 
+      <p>Let's get in touch.</p>
+    </div>
 
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Geon Kim" />
+    <div class="contact-wrap fade-up fade-up-2">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="kgkg1401@gmail.com" />
+      <!-- 왼쪽: 연락처 정보 -->
+      <div class="contact-info">
+        <!-- 💡 CUSTOMIZE: 인사말 -->
+        <h2>Say Hello 👋</h2>
+        <p>
+          Feel free to reach out if you want to collaborate,
+          have a question, or just want to connect!
+        </p>
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Hello!"></textarea>
+        <!-- 💡 CUSTOMIZE: 이메일/깃허브/위치 변경 -->
+        <div class="contact-row">
+          <span>📧</span>
+          <span>kgkg1401@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <span>🐙</span>
+          <a href="https://github.com/GeonKim0422" target="_blank"
+             rel="noopener" style="color:var(--accent);text-decoration:none;">
+            github.com/GeonKim0422
+          </a>
+        </div>
+        <div class="contact-row">
+          <span>📍</span>
+          <span>Seoul, South Korea</span>
+        </div>
+      </div>
 
-        <button type="submit">Send Message</button>
+      <!-- 오른쪽: 폼 -->
+      <form id="contactForm">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <!-- 💡 CUSTOMIZE: placeholder 텍스트 -->
+          <input type="text"  id="name"    name="name"    placeholder="Your name"        required />
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email"   name="email"   placeholder="your@email.com"   required />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea           id="message" name="message" placeholder="What's on your mind?" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message →</button>
       </form>
-    </section>
+
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Geon Kim</p> 
-  </footer>
+  <footer><p>&copy; 2026 Geon Kim</p></footer>
 
+  <script src="main.js"></script>
 </body>
 </html>

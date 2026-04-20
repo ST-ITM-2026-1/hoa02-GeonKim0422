@@ -3,28 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title> 
+  <!-- 💡 CUSTOMIZE: 탭 제목 -->
+  <title>Geon Kim — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
+    <!-- 💡 CUSTOMIZE: 왼쪽 로고 이니셜 -->
+    <a href="index.html" class="nav-brand">GK<span>.</span></a>
+
     <ul>
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
+      <li><a href="github.html">GitHub</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
+    <!-- 테마 토글 버튼 (HOA02) — main.js가 제어 -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span>
+      <span class="toggle-label" id="themeLabel">Dark</span>
+    </button>
   </nav>
 
   <main>
     <section class="intro">
-      <h1>Hi, I'm Geon Kim</h1> 
-      <p>I'm a ITM student passionate about building websites and learning new technologies.</p> 
+      <!-- 💡 CUSTOMIZE: 직책/전공 소개 문구 -->
+      <p class="intro-eyebrow fade-up fade-up-1">ITM Student · Web Developer</p>
 
+      <!-- 💡 CUSTOMIZE: 이름 변경 (<em> 태그 안 텍스트) -->
+      <h1 class="fade-up fade-up-2">Hi, I'm<br><em>Geon Kim</em></h1>
+
+      <!-- 💡 CUSTOMIZE: 자기소개 문장 -->
+      <p class="intro-bio fade-up fade-up-3">
+        I'm an Information Technology Management student passionate about
+        building websites and learning new technologies. I enjoy creating
+        clean, user-friendly experiences from the ground up.
+      </p>
+
+      <div class="intro-cta fade-up fade-up-4">
+        <a href="projects.html" class="btn btn-primary">View Projects →</a>
+        <a href="contact.html"  class="btn btn-ghost">Get in Touch</a>
+      </div>
+
+      <!-- 💡 CUSTOMIZE: 하단 통계 숫자와 라벨 자유롭게 변경 -->
+      <div class="home-stats fade-up fade-up-5">
+        <div>
+          <span class="home-stat-num">2+</span>
+          <span class="home-stat-label">Projects</span>
+        </div>
+        <div>
+          <span class="home-stat-num">5+</span>
+          <span class="home-stat-label">Technologies</span>
+        </div>
+        <div>
+          <span class="home-stat-num">ITM</span>
+          <span class="home-stat-label">Major</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 💡 CUSTOMIZE: 저작권 연도/이름 -->
   <footer>
-    <p>&copy; 2026 Geon Kim</p> 
+    <p>&copy; 2026 Geon Kim</p>
   </footer>
 
+  <!-- 공통 JS (테마 스위처) -->
+  <script src="main.js"></script>
 </body>
 </html>

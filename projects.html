@@ -3,42 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Projects</title>
+  <title>Geon Kim — Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
+    <a href="index.html" class="nav-brand">GK<span>.</span></a>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
+      <li><a href="github.html">GitHub</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span>
+      <span class="toggle-label" id="themeLabel">Dark</span>
+    </button>
   </nav>
 
   <main>
-    <section>
+    <div class="page-header fade-up fade-up-1">
       <h1>Projects</h1>
+      <!-- 💡 CUSTOMIZE: 부제목 문구 -->
+      <p>A selection of things I've built.</p>
+    </div>
 
-      <article class="project-card">
+    <!-- ─────────────────────────────────────────
+         필터 버튼 (HOA02)
+         💡 CUSTOMIZE: 버튼 추가 시 data-filter="카테고리명" 추가
+                       카드의 data-category와 값을 맞춰야 함
+         ───────────────────────────────────────── -->
+    <div class="filter-bar fade-up fade-up-2" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="systems">Systems</button>
+      <button class="filter-btn" data-filter="app">App</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+    </div>
+
+    <!-- ─────────────────────────────────────────
+         프로젝트 카드 목록
+         💡 CUSTOMIZE: 카드를 추가할 때
+           1. <article class="project-card" data-category="카테고리"> 추가
+           2. data-category 값은 필터 버튼의 data-filter 값과 일치해야 함
+           3. .tag.lang 클래스 = 언어 태그 (포인트 색 적용)
+         ───────────────────────────────────────── -->
+    <div class="projects-grid fade-up fade-up-3" id="projectsGrid">
+
+      <!-- 카드 1 -->
+      <article class="project-card" data-category="systems">
         <h2>XV6</h2>
-        <p>Teaching operating system practice on QEMU and Linux</p>
-        <p><strong>Technologies:</strong> C, Data Structure, Computer System</p>
+        <!-- 💡 CUSTOMIZE: 프로젝트 설명 -->
+        <p>Teaching operating system developed and run on QEMU and Linux.
+           Explored process scheduling, memory management, and system calls.</p>
+        <div class="project-tags">
+          <span class="tag lang">C</span>
+          <span class="tag">Data Structures</span>
+          <span class="tag">Computer Systems</span>
+        </div>
       </article>
 
-      <article class="project-card">
-        <h2>To-Do List App, WeekFlow</h2>
-        <p>A to-do list application where users can add and remove tasks.</p>
-        <p><strong>Technologies:</strong> Java, Git, Github</p>
+      <!-- 카드 2 -->
+      <article class="project-card" data-category="app">
+        <h2>WeekFlow</h2>
+        <p>A to-do list application where users can add, manage, and remove
+           tasks. Focused on clean UX and persistent state handling.</p>
+        <div class="project-tags">
+          <span class="tag lang">Java</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+        </div>
       </article>
 
-    </section>
+      <!-- 카드 3 -->
+      <article class="project-card" data-category="web">
+        <h2>Portfolio Site</h2>
+        <p>This portfolio — a responsive multi-page website built from scratch
+           using only HTML, CSS, and JavaScript. No frameworks used.</p>
+        <div class="project-tags">
+          <span class="tag lang">HTML</span>
+          <span class="tag lang">CSS</span>
+          <span class="tag lang">JavaScript</span>
+        </div>
+      </article>
+
+      <!-- 💡 CUSTOMIZE: 여기에 카드 추가
+      <article class="project-card" data-category="카테고리">
+        <h2>프로젝트 이름</h2>
+        <p>설명</p>
+        <div class="project-tags">
+          <span class="tag lang">언어</span>
+          <span class="tag">기술</span>
+        </div>
+      </article>
+      -->
+
+    </div>
+
+    <!-- 해당 카테고리에 카드가 없을 때 표시 -->
+    <p id="noResults" style="display:none; color:var(--text-sub); margin-top:1.5rem;">
+      No projects in this category yet.
+    </p>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Geon Kim</p> 
-  </footer>
+  <footer><p>&copy; 2026 Geon Kim</p></footer>
 
+  <script src="main.js"></script>
+  <!-- 프로젝트 필터 JS (HOA02) -->
+  <script src="projects.js"></script>
 </body>
 </html>

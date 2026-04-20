@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geon Kim — GitHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">GK<span>.</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="github.html" class="active">GitHub</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">🌙</span>
+      <span class="toggle-label" id="themeLabel">Dark</span>
+    </button>
+  </nav>
+
+  <main>
+    <div class="page-header fade-up fade-up-1">
+      <h1>GitHub</h1>
+      <p>My public profile and repositories.</p>
+    </div>
+
+    <!-- 프로필 영역 — github.js가 동적으로 채움 -->
+    <div id="profileSection" class="fade-up fade-up-2">
+      <div class="gh-loading">Loading profile</div>
+    </div>
+
+    <!-- 레포 영역 — github.js가 동적으로 채움 -->
+    <div id="reposSection" class="fade-up fade-up-3"></div>
+  </main>
+
+  <footer><p>&copy; 2026 Geon Kim</p></footer>
+
+  <script src="main.js"></script>
+  <!-- GitHub API 연동 JS (HOA02) -->
+  <script src="github.js"></script>
+</body>
+</html>
